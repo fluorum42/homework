@@ -1,0 +1,8 @@
+№2 
+select concat('This is ', name, ', ', 'he has ', email) as info from task_1 where gender = 'm' union select concat('This is ', name, ', ', 'she has ', email) as info from task_1 where gender = 'f';
+
+№3
+select concat('We have ', count(gender), ' boys!') as Gender_information from task_1 where gender = 'm' union select concat('We have ', count(gender), ' girls!') as Gender_information from task_1 where gender = 'f';
+
+№5
+select name, count(word.word) from vocabulary, word where vocabulary.id = word.vocabulary_id group by vocabulary.name;
