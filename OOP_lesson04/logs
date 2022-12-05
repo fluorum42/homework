@@ -8,13 +8,3 @@ Traceback (most recent call last):
   File "/home/polina/Документи/polina/homework/OOP_lesson04/employees.py", line 53, in validate
     raise EmailAlreadyExistsException
 empl_exceptions.EmailAlreadyExistsException
-Traceback (most recent call last):
-  File "/home/polina/Документи/polina/homework/OOP_lesson04/employees_run.py", line 14, in <module>
-    main()
-  File "/home/polina/Документи/polina/homework/OOP_lesson04/employees_run.py", line 8, in main
-    epm1 = Employee('Roy', 76, 'roy@email')
-  File "/home/polina/Документи/polina/homework/OOP_lesson04/employees.py", line 39, in __init__
-    self.validate()
-  File "/home/polina/Документи/polina/homework/OOP_lesson04/employees.py", line 53, in validate
-    raise EmailAlreadyExistsException
-empl_exceptions.EmailAlreadyExistsException
