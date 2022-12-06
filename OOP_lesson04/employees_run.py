@@ -1,4 +1,4 @@
-from datetime import datetime
+import logging
 import traceback
 from employees import Employee
 from empl_exceptions import EmailAlreadyExistsException
@@ -14,5 +14,14 @@ if __name__ == '__main__':
         main()
     except EmailAlreadyExistsException as err:
         print('Email already exists!')
-        with open('/home/polina/Документи/polina/homework/OOP_lesson04/logs', 'a+') as file:
+        Log_Format = "%(levelname)s %(asctime)s - %(message)s"
+
+        logging.basicConfig(filename="logs.txt",
+                            filemode="w",
+                            format=Log_Format,
+                            level=logging.ERROR)
+
+        logger = logging.getLogger()
+        logger.error("EmailAlreadyExistsException")
+        with open('/home/polina/Документи/polina/homework/OOP_lesson04/logs.txt', 'a+') as file:
             file.write(traceback.format_exc())
